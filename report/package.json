@@ -1,0 +1,16 @@
+{
+  "name": "report.js",
+  "version": "1.0.0",
+  "description": "it enables us report cases.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "moses ochieng",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node": "^19.6.0",
+    "twilio": "^4.7.2"
+  }
+}
