@@ -1,0 +1,201 @@
+body {
+            background: #ffffff;
+        }
+
+        /* .container {
+            max-width: 1000px;
+        } */
+
+        .row
+        {
+            min-height: 220px;
+        }
+
+        .team-area {
+            padding: 60px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            color: black;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            font-size: 65px;
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 5px;
+        }
+
+        .team-area .card {
+            border: none;
+            box-shadow: 0px 8px 16px 2px rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            background: #952D98;
+        }
+
+
+
+        .team-single:hover .side-two {
+            transform: rotateY(0deg);
+            border-radius: .25rem;
+        }
+
+        .team-single:hover .side-one {
+            transform: rotateY(180deg);
+        }
+
+        .content-area {
+            transform: perspective(1000px);
+            transition: 1s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .side-one {
+            position: relative;
+            transform: rotateY(0deg);
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+
+        .side-two {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: white;
+            transform: rotateY(-180deg);
+        }
+
+        .side-one,
+        .side-two {
+            backface-visibility: hidden;
+            transition: 1s;
+            transform-style: preserve-3d;
+        }
+
+        .name {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            width: 80px;
+            height: 80px;
+            border-radius: 75px;
+            color: white;
+            font-size: 24px;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+        .name #IMG{
+            width: 52px;
+            height: 52px;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            color: white;
+        }
+
+        .sideb {
+            background: #ffffff;
+        }
+
+        .front,
+        .back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-box-shadow: 0px 7px 0px 0px rgba(50, 50, 50, 0.11);
+            -moz-box-shadow: 0px 7px 0px 0px rgba(50, 50, 50, 0.11);
+            box-shadow: 0px 7px 0px 0px rgba(50, 50, 50, 0.11);
+        }
+
+        /* front pane, placed above back */
+        .front {
+            z-index: 2;
+        }
+
+        /* back, initially hidden pane */
+        .back {
+            transform: rotateY(180deg);
+        }
+
+        .bubble-front {
+            position: relative;
+            width: 100%;
+            min-height: 150px;
+            padding: 0;
+            background: #952D98;
+        }
+
+       
+
+        .footer {
+            background-color: #FAFAFA;
+            width: 100%;
+            height: 60px;
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button1 {
+            background: white;
+            width: 100%;
+            height: 40px;
+            position: relative;
+            border-color: white;
+            border-radius: 10px;
+            bottom: 10px;
+            transition: all 0.25s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+        }
+
+        .button1:after {
+            content: "";
+            background: white;
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            top: 75%;
+            left: 46%;
+            transform: rotate(45deg);
+            transition: all 0.25s ease-in-out;
+        }
+
+        .button1:hover::after {
+            transform: rotate(135deg);
+        }
+
+        #cardFooter .buttonWrapper .button .Btn-click {
+            text-decoration: underline white;
+            color:  #1e1656;
+            padding-top: 10px
+        }
+
+        .card-footer {
+            border: none;
+        }
+
+        .footer h5 {
+            color: #1e1656;
+            font-family: 'Roboto';
+            font-weight:lighter ;
+            
+        }
+
+        #backCard{
+            height: 200px;
+        }
+        #Title{
+            color: #1e1656;
+            font-family: 'Roboto';
+            font-weight:lighter ;
+        }
