@@ -67,11 +67,8 @@
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="practice.html">Partners.</a></li>
-							<li class="active"><a href="won.html">Social Justice Centers.</a></li>
-							<li class="has-dropdown">
-								<a href="blog.html">Blog</a>
+							<li class="active"><a href="won.php">Social Justice Centers.</a></li>
 							
-							</li>
 							<li><a href="about.html">About</a></li>
 							<li><a href="contact.html">Contact</a></li>
 							<li class="btn-cta"><a href="#"><span>Piga ripoti</span></a></li>
@@ -86,14 +83,18 @@
 	<aside id="colorlib-hero" class="js-fullheight">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
-		   	<li style="background-image: url(images/h.jpg);">
+		   	<li style="background-image: url(images/l.jpeg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner desc">
 		   					<h2 class="heading-section">Social &amp; Justice Centers</h2>
-		   					<p class="colorlib-lead">This are institutions that we connect to gender based violence victims and help them. <a href="#" target="_blank">Social Justice Centers.</a></p>
-		   				</div>
+		   					
+							<p class="colorlib-lead">This are institutions that we connect to gender based violence victims and help them. <a href="#" target="_blank">Social Justice Centers.</a></p>
+		   				<a href="public/login/dist/index.php">
+							<button>Login</button>
+						</a>
+						</div>
 		   			</div>
 		   		</div>
 		   	</li>

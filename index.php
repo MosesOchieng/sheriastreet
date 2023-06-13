@@ -1,5 +1,5 @@
 <?php
- session_start();
+
  if(!isset($_COOKIE["comply_cookie"])) { ?>
 	<div id="cookies">
 	<p>Our website uses cookies. By continuing we assume your permission to deploy cookies, as detailed in our <a href="yourPolicy">privacy policy</a>.
@@ -31,8 +31,91 @@
 <style>
     /* CSS styles for the popup */
  
-
-	#cookies { 
+.news {
+  background-color: #000000af;
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+  top: 0;
+}
+.news .newsfooter {
+  text-align: center;
+}
+.news .closeBtn {
+  margin-top: 10px;
+  background-color: #ee574c;
+  color: #fff;
+  padding: 6px 10px;
+  border: none;
+}
+.news .closeBtn::after {
+  content: "Got It";
+  padding: 10px;
+}
+.news .newsBox {
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background-color: #fff;
+  background-image: url("https://enally.in/images/new/news-bg.png");
+  background-size: contain;
+  width: 50%;
+  height: 450px;
+  padding: 3% 2%;
+}
+.news .newsBox .content {
+  -webkit-box-shadow: inset 0px 1px 12px -1px rgba(0, 0, 0, 0.033);
+  -moz-box-shadow: inset 0px 1px 12px -1px rgba(0, 0, 0, 0.033);
+  box-shadow: inset 0px 1px 12px -1px rgba(0, 0, 0, 0.033);
+  height: 280px;
+  padding: 20px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #ee574c #f7f7f7;
+}
+.news .newsBox .content::-webkit-scrollbar {
+  width: 5px;
+}
+.news .newsBox h5 {
+  font-weight: 900;
+}
+.news .newsBox .heading {
+  text-align: center;
+  font-size: 32px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #ee574c;
+}
+.news .news-animation {
+  animation-name: slideNewsOut;
+  animation-duration: 0.8s;
+}
+@keyframes slideNewsOut {
+  from {
+    transform: translateX(-800px);
+    transition-duration: 0.6s;
+    width: 20%;
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.news .news-close-animation {
+  animation-name: slideNewsIn;
+  animation-duration: 0.9s;
+}
+@keyframes slideNewsIn {
+  from {
+    transform: translateX(0px);
+    transition-duration: 0.9s;
+    width: 20%;
+  }
+  to {
+    transform: translateX(-1200px);
+  }
+}
+#cookies { 
   width: 100%;
   margin: 0;
   padding: 0.5em 10%;
@@ -115,7 +198,7 @@
 							<li><a href="about.php">About</a></li>
 							
 						
-							<li><a href="public/login/l/index.php">Report Case</a></li>
+							<li><a href="javascript: void(0);" id="music" class="music-mode-btn text-white  rounded-end">Report Case</a></li>
 						</ul>
 						
 					</div>
@@ -124,7 +207,8 @@
 			</div>
 		</div>
 	</nav>
-
+	
+</section>
 	<aside id="colorlib-hero" class="js-fullheight">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
@@ -156,7 +240,7 @@
 			   		</div>
 		   		</div>
 		   	</li>
-			   <li style="background-image: url(images/K.jpeg);">
+			   <li style="background-image: url(images/t.jpg);">
 				<div class="overlay-gradient"></div>
 				<div class="container">
 					<div class="row">
@@ -311,9 +395,105 @@
 	</div>
 	
 
+	<section>
+<div class="news" id="news_box" style="display: none;">
+        <div class="newsBox" id="newss">
+            <p class="heading" id="heading">Piga Ripoti</p>
+            <div class="content">
+            <h5>Welcome</h5>
+            <p>
+Habari yako, are you a victim of Gender based violence ,click next to seek help across social justice centers near you.
+                <br>
+                <center>
+              Click next.
+			  <br>
+			  <br>
+			  <div style="display: inline-block;">
+			  <a href="javascript: void(0);" id="mu" class="music-mode-btn text-white  rounded-end">
+				<button style="display: inline-block;">Next</button>
+			  </a>
+			  <div class="newsfooter">
+                <button style="display: inline-block;" class="closeBtn btn-dark" id="closeNews"></button>
+            </div>
+			  </div>
+                </center>
+            </p>
+            </div>
 
+        </div>
+    </div>
+
+<div class="next" id="news_next" style="display: none;">
+<div class="newsB" id="news">
+            <p class="heading" id="heading">Piga Ripoti</p>
+            <div class="content">
+			<form id="nextPageForm">
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="text" id="phoneNumber" name="phoneNumber" required>
+          <br>
+          <label for="caseDetails">Case Details:</label>
+          <textarea id="caseDetails" name="caseDetails" required></textarea>
+          <br>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <br>
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required>
+        </form>
+        <center>
+          <button onclick="submitForm()" style="display: inline-block;">Submit</button>
+        </center>
+</div>
+<script>
+	// News Slider Animation    
+
+addEventListener("load", function() {
+    document.getElementById("news_box").style.display = "none";
+});
+
+const news = document.getElementById("music");
+const closebtn = document.getElementById("closeNews");
+news.addEventListener("click", (e) => {
+    window.scrollTo(0, 0);
+    document.getElementById("news_box").style.display = "flex";
+    document.getElementById("newss").classList.add("newsBox", "news-animation");
+});
+
+closebtn.addEventListener("click", (e) => {
+    // document.getElementById("newss").classList.add("news-close-animation", "newsBox");
+    // setTimeout(function() {
+    //     document.getElementById("news_box").style.display = "none";
+    // }, 100)
+    document.getElementById("news_box").style.display = "none";
+
+});
+</script>
 	
+<script>
+		// News Slider Animation    
 
+addEventListener("load", function() {
+    document.getElementById("news_box").style.display = "none"; 
+});
+
+const newl = document.getElementById("mu");
+const close = document.getElementById("closeNews");
+news.addEventListener("click", (e) => {
+    window.scrollTo(0, 0);
+    document.getElementById("news_box").style.display = "flex";
+    document.getElementById("newss").classList.add("newsBox", "news-animation");
+});
+
+closebtn.addEventListener("click", (e) => {
+    // document.getElementById("newss").classList.add("news-close-animation", "newsBox");
+    // setTimeout(function() {
+    //     document.getElementById("news_box").style.display = "none";
+    // }, 100)
+    document.getElementById("news_box").style.display = "none";
+
+});
+
+</script>
 	
 			</div>
 		</div>

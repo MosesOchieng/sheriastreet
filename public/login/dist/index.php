@@ -80,6 +80,7 @@
                 <label>Password</label>
                 <input type="password" />
               </div>
+              <div class="h-captcha" data-sitekey="194e8efb-f32d-4d44-8ffb-b54694c2f321"></div>
               <div><input type="checkbox" id="vehicle1" name="vehicle1" value="sheria street">
       <label for="terms"> By checking the box you agree to the <a href="#"><span> terms and conditions</span></a> of the Sheria Street applicatin use.</label><br></div>
               <div class="button-input input">
@@ -87,9 +88,9 @@
               </div>
             </form>
           </div>
-          <div class="form-wrapper form-wrapper-two form-wrapper-hidden">
+          <div class="form-wrapper form-wrapper-two form-wrapper-hidden" id="login">
             <section class="header">
-              <h1>Organisations sign in only</h1>
+              <h1>Login</h1>
               <nav>
                 <a href="#" class="menu-item">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -132,6 +133,9 @@
                 <label>Password</label>
                 <input type="password" />
               </div>
+              
+              <div class="h-captcha" data-sitekey="194e8efb-f32d-4d44-8ffb-b54694c2f321"></div>
+
               <div><input type="checkbox" id="vehicle1" name="vehicle1" value="sheria street">
   <label for="terms"> By checking the box you agree to the <a href="#"><span> terms and conditions</span></a> of the Sheria Street applicatin use.</label><br></div>
               <div class="forget-password-input input">
